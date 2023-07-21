@@ -35,7 +35,7 @@ export default function VanDetails() {
             /day
           </p>
           <p className='text-base'>{van.description}</p>
-          <button className='bg-rentVan text-white mb-24 rounded-md py-3 text-lg'>
+          <button className='bg-rentVan text-white mb-24 rounded-md py-3 text-lg mt-2'>
             Rent this van
           </button>
         </div>

@@ -37,7 +37,7 @@ export default function Vans() {
   ));
   return (
     <div className='px-4 text-center mt-14'>
-      <h1 className='text-3xl text-luxury font-semibold mb-4'>
+      <h1 className='text-3xl text-luxury font-semibold mb-16'>
         Explore our van options
       </h1>
       {vanElements}

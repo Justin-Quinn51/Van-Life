@@ -9,7 +9,12 @@ export default {
         lightGray: '#AAAAAA',
         lightestGray: '#4D4D4D;',
         veryDarkGray: '#161616',
-        offWhite: ' #FFF7ED',
+        offWhite: '#FFF7ED',
+        simple: '#E17654',
+        rugged: '#115E59',
+        luxury: '#161616',
+        vanTypeText: '#FFEAD0',
+        rentVan: '#FF8C38',
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],

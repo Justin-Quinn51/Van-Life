@@ -3,28 +3,6 @@ import { Link } from 'react-router-dom';
 export default function About() {
   return (
     <>
-      <header className='bg-offWhite'>
-        <nav className='flex justify-between items-center py-9 px-6'>
-          <Link to='/'>
-            <img className='w-36' src='/vanLogo.png' alt='Van life Logo' />
-          </Link>
-          <ul className='flex gap-4 text-lightestGray'>
-            <li>
-              <Link
-                className='text-md cursor-pointer hover:bg-gray-700'
-                to='/about'
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link className='text-md cursor-pointer' to='/vans'>
-                Vans
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
       <section className='text-veryDarkGray'>
         <img
           src='/image 55.svg'
@@ -53,9 +31,6 @@ export default function About() {
           </div>
         </div>
       </section>
-      <footer className='text-center bg-darkGray py-7 px-24'>
-        <small className='text-lightGray'>Ⓒ 2022 #VANLIFE</small>
-      </footer>
     </>
   );
 }

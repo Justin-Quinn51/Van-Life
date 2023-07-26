@@ -79,7 +79,7 @@ export default function Vans() {
   }
 
   return (
-    <section className='px-4 text-center mt-8'>
+    <section className='px-4 text-center mt-4'>
       <div>
         <h1 className='text-3xl text-luxury font-semibold mb-10'>
           Explore our van options

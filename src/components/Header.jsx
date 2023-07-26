@@ -1,10 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 
 export default function Header() {
-  function fakeLogOut() {
-    localStorage.removeItem('loggedin');
-  }
-
   return (
     <header className='bg-offWhite flex justify-between items-center py-9 px-4'>
       <Link to='/'>
@@ -47,7 +43,6 @@ export default function Header() {
               <img src='../../userCircle.svg' alt='' />
             </Link>
           </li>
-          <button onClick={fakeLogOut}>X</button>
         </ul>
       </nav>
     </header>

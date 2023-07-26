@@ -25,7 +25,10 @@ export default function About() {
             <h3 className='text-2xl mb-5'>
               Your destination is waiting. Your van is ready.
             </h3>
-            <Link className='text-base bg-veryDarkGray text-white font-semibold py-3 px-5 rounded-lg'>
+            <Link
+              to='/vans'
+              className='text-base bg-veryDarkGray text-white font-semibold py-3 px-5 rounded-lg'
+            >
               Explore our vans
             </Link>
           </div>

@@ -18,6 +18,7 @@ export default {
         FilterButtonText: '#4D4D4D',
         emptyBar: '#B9B9B9',
         date: '#8C8C8C',
+        reviewBg: '#FFDDB2',
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],

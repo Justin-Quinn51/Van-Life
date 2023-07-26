@@ -1,19 +1,55 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Link, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { getVans } from '../../api';
 
 export default function VanDetails() {
-  const params = useParams();
+  const { id } = useParams();
+  const location = useLocation();
   const [van, setVan] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`/api/vans/${params.id}`)
-      .then((res) => res.json())
-      .then((data) => setVan(data.vans));
-  }, [params.id]);
+    async function loadVans() {
+      setLoading(true);
+      try {
+        const data = await getVans(id);
+        setVan(data);
+      } catch (err) {
+        setError(err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    loadVans();
+  }, [id]);
+
+  if (loading) {
+    return <h1>Loading...</h1>;
+  }
+
+  if (error) {
+    return <h1>There was an error: {error.message}</h1>;
+  }
+
+  const search = location.state?.search || '';
+  const vanType = location.state?.type || 'all';
 
   return (
     <div>
-      {van ? (
+      <Link
+        to={`..${search}`}
+        relative='path'
+        className='flex justify-start gap-x-2 ml-7 mt-8 text-xl'
+      >
+        &larr;
+        <span className='underline underline-offset-2 text-xl'>
+          {' '}
+          Back to {vanType} vans
+        </span>
+      </Link>
+
+      {van && (
         <div className='text-luxury flex flex-col gap-y-5 px-5'>
           <img className='mt-24' src={van.imageUrl} alt='' />
           <div
@@ -39,8 +75,6 @@ export default function VanDetails() {
             Rent this van
           </button>
         </div>
-      ) : (
-        <h2>Loading...</h2>
       )}
     </div>
   );

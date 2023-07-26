@@ -15,6 +15,9 @@ export default {
         luxury: '#161616',
         vanTypeText: '#FFEAD0',
         rentVan: '#FF8C38',
+        FilterButtonText: '#4D4D4D',
+        emptyBar: '#B9B9B9',
+        date: '#8C8C8C',
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],

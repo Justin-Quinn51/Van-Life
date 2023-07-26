@@ -1,13 +1,17 @@
 import { Link, NavLink } from 'react-router-dom';
 
 export default function Header() {
+  function fakeLogOut() {
+    localStorage.removeItem('loggedin');
+  }
+
   return (
-    <header className='bg-offWhite flex justify-between items-center py-9 px-6'>
+    <header className='bg-offWhite flex justify-between items-center py-9 px-4'>
       <Link to='/'>
         <img className='w-36' src='/vanLogo.png' alt='Van life Logo' />
       </Link>
       <nav className=''>
-        <ul className='flex gap-4 text-lightestGray'>
+        <ul className='flex gap-3 text-lightestGray'>
           <li>
             <NavLink
               to='/host'
@@ -38,6 +42,12 @@ export default function Header() {
               Vans
             </NavLink>
           </li>
+          <li>
+            <Link to='/login' className=''>
+              <img src='../../userCircle.svg' alt='' />
+            </Link>
+          </li>
+          <button onClick={fakeLogOut}>X</button>
         </ul>
       </nav>
     </header>

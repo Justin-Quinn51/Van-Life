@@ -16,7 +16,7 @@ export default function Income() {
         </p>
         <h3 className='font-semibold text-left mt-3 text-2xl'>$2,260</h3>
       </div>
-      <img src='../../../public/barChart.png' alt='' />
+      <img src='../../../barChart.png' alt='' />
       <div className='flex justify-between items-center my-2'>
         <h2 className='font-semibold text-md'>Your transactions (3)</h2>
         <p className='text-FilterButtonText text-left text-xs'>
